@@ -38,7 +38,7 @@ export const GET = async (req: Request) => {
 
 export const POST = async (req: Request) => {
   const { searchParams } = new URL(req.url);
-  const session = await getAuthSession();
+  const session: any = await getAuthSession();
 
   if (!session) {
     return new NextResponse(JSON.stringify({ message: "Not Authenticated" }), {

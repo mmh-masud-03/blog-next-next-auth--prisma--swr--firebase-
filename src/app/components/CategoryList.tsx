@@ -36,7 +36,7 @@ export const getData = async () => {
     cache: "no-store",
   });
   if (!res.ok) {
-    throw new Error("Failed");
+    throw new Error("Failed to get data");
   }
   return res.json();
 };
